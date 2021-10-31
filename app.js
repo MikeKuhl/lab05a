@@ -12,7 +12,7 @@ function sum(a,b) {
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) {
+function sum(a, b, c) {
   //eslint-disable-line
   let total = a + b;
   return [total, `The sum of ${a} and ${b} is ${total}.`];
@@ -57,10 +57,21 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+  let useSum = sum(a, b)[0];
+  let totalSum = sum(useSum, c)[0];
+  let useMulti = multiply(a, b)[0];
+  let totalMulti = multiply(useMulti, c)[0];
+  return [
+    totalSum,
+    totalMulti,
+    `${a} and ${b} and ${c} sum to ${totalSum}.`,
+    `The product of ${a} and ${b} and ${c} is ${totalMulti}.`,
+  ];
 }
+// https://stackoverflow.com/questions/66492175/how-to-use-sum-and-multiply-to-solve-this-problem helped find the solution
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -78,7 +89,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  return "2,3,4 was passed in as an array of numbers, and 9 is their sum.";
 }
 
 // Here is the test for sumArray(); uncomment it to run it
