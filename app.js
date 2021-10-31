@@ -89,12 +89,20 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  return "2,3,4 was passed in as an array of numbers, and 9 is their sum.";
-}
+  let totalSum = sumArr[0];
 
+  for (let i = 1; i < sumArr.length; i += 1) {
+    totalSum = sum(totalSum, sumArr[i])[0];
+    console.log(totalSum);
+  }
+  return [
+    totalSum,
+    `${testArray} was passed in as an array of numbers, and ${totalSum} is their sum.`,
+  ];
+}
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -110,11 +118,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+  let totalMulti = multArr[0];
+
+  for (let i = 1; i < multArr.length; i += 1) {
+    totalMulti = multiply(totalMulti, multArr[i])[0];
+    console.log(totalMulti);
+  }
+  return [
+    totalMulti,
+    `The numbers ${testArray} have a product of ${totalMulti}.`,
+  ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -138,7 +155,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
+  let totalMulti = dynamicArray[0];
+
+  for (let i = 1; i < dynamicArray.length; i += 1) {
+    totalMulti = multiply(totalMulti, dynamicArray[i])[0];
+    console.log(totalMulti);
+  }
+  return [
+    totalMulti,
+    `The numbers ${testDynamicArray} have a product of ${totalMulti}.`,
+  ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
