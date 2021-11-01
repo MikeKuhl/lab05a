@@ -100,6 +100,8 @@ function sumArray(sumArr) {
     `${testArray} was passed in as an array of numbers, and ${totalSum} is their sum.`,
   ];
 }
+
+//solution help found here https://stackoverflow.com/questions/66492175/how-to-use-sum-and-multiply-to-solve-this-problem
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
@@ -122,14 +124,13 @@ function multiplyArray(multArr) {
 
   for (let i = 1; i < multArr.length; i += 1) {
     totalMulti = multiply(totalMulti, multArr[i])[0];
-    console.log(totalMulti);
   }
   return [
     totalMulti,
     `The numbers ${testArray} have a product of ${totalMulti}.`,
   ];
 }
-
+//solution help found here https://stackoverflow.com/questions/66492175/how-to-use-sum-and-multiply-to-solve-this-problem
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
@@ -166,7 +167,7 @@ function multiplyAnyArray(dynamicArray) {
     `The numbers ${testDynamicArray} have a product of ${totalMulti}.`,
   ];
 }
-
+//solution help found here https://stackoverflow.com/questions/66492175/how-to-use-sum-and-multiply-to-solve-this-problem
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
 
